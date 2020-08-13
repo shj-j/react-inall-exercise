@@ -47,15 +47,8 @@ class Calculater extends Component{
             }
             console.log("this op: ", this.op)
         }else{
-            // if(this.firstNum !== ''){
-            //     this.secondNum = curInput
-            // }else{
-            //     this.firstNum = curInput
-            // }
             this.firstNum === '' ? this.firstNum = curInput : this.secondNum = curInput
-
             console.log("firstname", this.firstNum, " seconde: ", this.secondNum)
-            
             this.setState({
                 inputs: this.state.inputs+curInput,
             })
