@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Caculater.less';
+import { NavLink} from "react-router-dom";
 
 class Calculater extends Component{ 
     constructor(props){
@@ -59,6 +60,7 @@ class Calculater extends Component{
         return (
             <div className="calculater">
                 <h1>在线计算器</h1>
+   
                 <div className="result_div"> 
                     <input className="result_input" readOnly type="text" value = {this.state.inputs}/>
                 </div>
@@ -66,6 +68,9 @@ class Calculater extends Component{
                     {this.keyboard.map(num=>(
                         <input value={num} className="keyboard" type="button" onClick={this.handleInput}/>
                     ))}
+                </div>
+                <div>
+                    <NavLink  to="/">回到主页</NavLink>
                 </div>
             </div>
         );
