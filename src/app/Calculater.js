@@ -38,12 +38,12 @@ class Calculater extends Component{
             }
             if(this.op === "-"){
                 this.setState({
-                    inputs: this.firstNum - this.secondNum
+                    inputs: +this.firstNum - +this.secondNum
                 })
             }
             if(this.op === "*"){
                 this.setState({
-                    inputs: this.firstNum * this.secondNum
+                    inputs: +this.firstNum * +this.secondNum
                 })
             }
             console.log("this op: ", this.op)
