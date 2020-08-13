@@ -10,7 +10,8 @@ class Counter extends Component{
   }
   handleClick=()=>{
     this.setState({
-      isStart: !this.state.isStart,
+      isStart: ! this.state.isStart,
+      // timer: this.state.timer -1
     })
   }
 
@@ -22,12 +23,14 @@ class Counter extends Component{
 
   componentDidUpdate(){
     const {timer, isStart} = this.state;
-    if(timer && isStart){
-      setInterval(()=>this.setState({
+    console.log(isStart)
+    if(timer >0 && isStart){
+      setTimeout(()=>this.setState({
         timer: this.state.timer - 1
       }),1000)
     }
   }
+
   render(){
     return(
       <div>
